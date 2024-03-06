@@ -9,7 +9,8 @@ server.use(cors());
 server.use(bodyParser.json());
 
 server.post('/home',(req, res) => {
-    res.send(hello);
+    console.log(req.body);
+    res.json(req.body);
 })
 
 server.listen (8080,()=>{
